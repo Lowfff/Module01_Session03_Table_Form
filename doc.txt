@@ -1,0 +1,61 @@
+Form: hay còn gọi là biểu mẫu, giúp nhận gửi dử liệu lên sever
+vd: form đăng kí, dăng nhập, khảo sát, ...
+Các thuộc tính trong form
+1.
+<action>: địa chỉ nơi nhận dữ liệu
+method:phương thức để gửi dữ liệu
++nếu ko điền thuộc tính method thì form mặc định sẽ lấy phương thức get
+
+NOTE: 
+THUỘC TÍNH NAME:lấy dữ liệu gửi lên sever thông qua thuộc tính name
+THUỘC TÍNH ID: định danh cho thẻ, mỗi thẻ chỉ có 1 ID duy nhất
+*********************
+Các trường dữ liệu và các thẻ trong form
+1.LABEL: khi có giá trị thuộc tính forr trùng với ID của ô input thì khi click vào label sẽ focus tới ô input cần nhập
+2.INPUT(ô): là fill để nhập dữ liệu
+*Các giá trị của thuộc tính TYPE(input)
+1.type="text": nhập dữ liệu dạng text
+2.type="password:: giá trị sẽ bị che đi 
+3.type="radio": khi các ô có cùng giá trị thuộc tính name thì chỉ chọn 1 fill
+*nếu muốn mặc địnhthì cho nó thêm thuộc tính CHECKED
+4.type="checkbox":có thể chọn nhiều giá trị
+5.type="file": có thể chọn tệp để gửi dữ liệu lên
++mặc định chọn 1 tệp
++muốn chọn nhiều tệp thêm thuộc tính "multiple"
+6.type="date": chọn ngày/tháng/năm
+7.type="month": chọn tháng/năm
+8.type="email": yêu cầu nhập định dạng thep dạng email
+9.type="phone": yêu cầu nhập định dạng theo dạng SỐ
+10.type="ranger: mô tả tiến trình bằng thanh kéo
+11.type="color": chọn màu
+12.type="submit": nút gửi + <button></button>: cũng là gửi (*button disable: làm ẩn đi)
+13.<select><option></option></select> : tạo ô chọn (*selected: tạo mặc định chọn)
+14.type="reset": đặt lại
+
+
+
+*placeholder: gợi ý cho người dùng nhập dữ liệu
+*require: bắt buộc người dùng phải nhập dữ liệu 
+*autocomplete="off": không muốn gợi ý
+textarea: điền nhiều ký tự
+VALUE: giá trị của ô input
+
+
+
+
+
+
+Phân bieejt post và get
+1.Không nên gửi dữ liệu nhạy cảm(mk, email,..) bằng phương thức get2
+2 -SỐ LƯỢNG KÍ TỰ KHI GỬI
++Đối với phương thức get sẽ hạn chế số lượng kí tự khi gửi lên (2045 kí tự)
++Đối với phương thức post sẽ không hạn chế
+  -CACHE
++Đối với get có CACHE
++Đối với post có CACHE
+  -RẰNG BUỘC KIỂU DỮ liệu
+  +Chỉ chấp nhận các kí tự ASCII
+  +Không có rằng buộc,chấp nhận cả dữ liệu nhị Phân
+  -KẾT QUẢ TRUY VẤN
+  +Có thể đánh dấu(bookmarker)
+  +Không thể đánh dấu
